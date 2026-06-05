@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZUYN - Coming Soon</title>
+	<link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+</head>
+<body>
+
+    <div class="bg-container">
+        <div class="bg-overlay"></div>
+    </div>
+
+    <div class="wrapper">
+        
+        <header>
+            <div class="bracket-box nav-links">
+                <a href="under_construction.html">About</a>
+                <span class="nav-divider">|</span>
+                <a href="contact_index.html">Contact</a>
+            </div>
+
+            <div class="logo">
+                <img class="logo-icon" src="image/logo.png" alt="logo">
+            </div>
+
+            <div class="bracket-box countdown">
+                <span id="days">00</span>-
+                <span id="hours">00</span>-
+                <span id="minutes">00</span>-
+                <span id="seconds">00</span><h6>Days Left</h6>
+            </div>
+        </header>
+
+        <main>
+            <h2>We're coming soon</h2>
+            <p>We're working hard to give you the best experience. Stay with us and enjoy something new!</p>
+			<form action="https://formspree.io/f/xaqzngpk" method="POST">
+		
+				<input type="email" id="username" name="username" placeholder="Enter a valid email" required>
+				<button type="submit" class="btn-notify">Notify me!</button>
+		</form>
+            
+        </main>
+
+        <footer>
+            
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Google Plus"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#" aria-label="Behance"><i class="fab fa-behance"></i></a>
+            </div>
+            <p>Website by coderbd <br>&copy; 2026 All Rights Reserved.</p>
+        </footer>
+
+    </div>
+<script>
+    // Countdown Example
+
+
+    // Set target date
+    const targetDate = new Date("Jul 6, 2026 00:00:00").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerText = days;
+      document.getElementById("hours").innerText = hours;
+      document.getElementById("minutes").innerText = minutes;
+      document.getElementById("seconds").innerText = seconds;
+
+      // When countdown ends
+      if (distance < 0) {
+        clearInterval(interval);
+        document.querySelector(".countdown").innerHTML = "<h2>Time's Up!</h2>";
+      }
+    }
+
+    updateCountdown();
+
+    const interval = setInterval(updateCountdown, 1000);
+  
+    // Button Ac
+    
+  </script>
+</body>
+</html>
